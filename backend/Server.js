@@ -11,6 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+app.get("/", (req, res) => {
+  res.send("Welcome to the TPR   backend!");
+});
 app.use(express.json());
 app.use(cors());
 

@@ -13,7 +13,7 @@ const ResetPassword = () => {
     console.log(token,25)
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/reset-password/${token.token}`, {
+      const response = await fetch(`https://tpr-wealth-mern.onrender.com/api/auth/reset-password/${token.token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password, token }),
