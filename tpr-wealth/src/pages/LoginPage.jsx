@@ -30,7 +30,7 @@ const LoginPage = () => {
         : "/api/auth/forgot-password";
 
     try {
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://tpr-wealth-mern.onrender.com${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(authMode === "forgotPassword" ? { email: formData.email } : formData),
